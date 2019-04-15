@@ -50,7 +50,7 @@ namespace Activation_Keys
                     sb.Add(gameCode.ToUpper());
 
                 }
-                if (lent == 16)
+                else if (lent == 16)
                 {
                     for (int j = 0; j < code.Length; j++)
                     {
@@ -79,7 +79,11 @@ namespace Activation_Keys
 
                 gameCode = string.Empty;
             }
-            Console.WriteLine(string.Join(", ", sb));
+            if (sb.Count > 0)
+            {
+                Console.WriteLine(string.Join(", ", sb));
+            }
+
         }
     }
 }
